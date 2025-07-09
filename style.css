@@ -221,30 +221,44 @@ body {
 }
 
 .hero-image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .hero-card {
-    position: relative;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-    transform: rotate(3deg);
-    transition: transform 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%; /* Make it perfectly circular */
+  width: 550px;
+  height: 550px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  animation: float 6s ease-in-out infinite;
+  border: 5px solid white; /* Adds a clean border */
 }
 
 .hero-card:hover {
-    transform: rotate(0deg) scale(1.05);
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
 }
 
 .hero-card img {
-    width: 400px;
-    height: 300px;
-    object-fit: cover;
-    display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
 
 /* Section Styles */
 section {

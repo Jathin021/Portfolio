@@ -122,11 +122,7 @@ window.addEventListener('load', () => {
         }, 500);
         
         setTimeout(() => {
-            typeWriter(heroProfession, 'Electronics & IoT Developer', 60);
-        }, 3000);
-        
-        setTimeout(() => {
-            typeWriter(heroSubtitle, 'Full-Stack Enthusiast | Workshop Organizer', 50);
+            typeWriter(heroSubtitle, 'Embedded Systems Enthusiast | Web Developer', 50);
         }, 5000);
     }
 });
