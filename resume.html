@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jathin Pusuluri - Resume</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin-top: 0 !important;
+            padding-top: 0 !important;
+        }
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, 'Segoe UI', sans-serif;
+            color: #000;
+            background: linear-gradient(135deg, #f7f7f7 60%, #e9e9ef 100%);
+            margin: 0;
+            padding: 0;
+        }
+        .resume-container {
+            width: 21cm;
+            min-height: 29.7cm;
+            max-width: 21cm;
+            margin: 0 auto 0 auto;
+            background: #fff;
+            padding: 0 16px 8px 16px;
+            position: relative;
+            box-shadow: 0 4px 18px rgba(0,0,0,0.10);
+            border-radius: 10px;
+            border: 1px solid #e0e0e0;
+            box-sizing: border-box;
+            padding-top: 0 !important;
+        }
+        .header {
+            margin-bottom: 0px;
+        }
+        .header h2 {
+            font-size: 2.1rem;
+            font-family: 'Georgia', 'Times New Roman', serif;
+            font-weight: 900;
+            margin-bottom: 2px;
+            letter-spacing: 0.5px;
+        }
+        .contact-list {
+            list-style: none;
+            margin: 0 0 0 0;
+            padding: 0;
+            font-size: 0.97rem;
+        }
+        .contact-list li {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-bottom: 0px;
+        }
+        .contact-list a {
+            color: #000;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .contact-list a:hover {
+            color: #1a73e8;
+            text-decoration: underline;
+        }
+        .contact-label {
+            min-width: 60px;
+            font-weight: 500;
+        }
+        .section {
+            margin-bottom: 7px;
+            margin-top: 7px;
+        }
+        .section-title {
+            font-size: 0.97rem;
+            font-weight: bold;
+            margin-bottom: 1px;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+            border-bottom: 1px solid #000;
+            padding-bottom: 0px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+            background: linear-gradient(90deg, #f7f7f7 60%, #e9e9ef 100%);
+            transition: border-color 0.2s, color 0.2s, box-shadow 0.2s;
+        }
+        .section-title:hover {
+            color: #1a73e8;
+            border-bottom: 1.2px solid #1a73e8;
+            box-shadow: 0 2px 8px rgba(26,115,232,0.10);
+        }
+        .edu-entry {
+            margin-bottom: 2px;
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+        .edu-left {
+            font-weight: bold;
+        }
+        .edu-right {
+            font-size: 0.93rem;
+            font-weight: normal;
+            margin-left: 8px;
+            white-space: nowrap;
+        }
+        .edu-inst {
+            font-style: italic;
+            font-weight: normal;
+            margin-left: 0;
+            display: block;
+        }
+        .edu-grade {
+            font-size: 0.93rem;
+            margin-left: 0;
+            font-weight: normal;
+            display: block;
+        }
+        .exp-role {
+            font-weight: bold;
+        }
+        .exp-org {
+            font-style: italic;
+        }
+        .exp-date {
+            font-size: 0.93rem;
+        }
+        .project-title {
+            font-weight: bold;
+        }
+        .skills-lines {
+            margin-left: 10px;
+        }
+        .skills-line {
+            margin-bottom: 1px;
+            font-size: 0.97rem;
+        }
+        ul, ol {
+            margin: 0 0 0 18px;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 1px;
+        }
+        hr {
+            border: none;
+            border-top: 1px solid #bbb;
+            margin: 4px 0 2px 0;
+        }
+        hr:first-child {
+            margin-top: 0 !important;
+        }
+        .print-btn {
+            display: block;
+            margin: 10px auto 4px auto;
+            padding: 5px 18px;
+            font-size: 0.95rem;
+            border: 1.2px solid #222;
+            background: #fff;
+            border-radius: 20px;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+            transition: background 0.25s, color 0.25s, transform 0.2s, box-shadow 0.2s;
+        }
+        .print-btn:hover {
+            background: #222;
+            color: #fff;
+            transform: scale(1.04);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.13);
+        }
+        @media print {
+            body { background: #fff; }
+            .print-btn { display: none; }
+            .resume-container {
+                box-shadow: none;
+                border-radius: 0;
+                border: none;
+                width: 100vw;
+                min-height: 0;
+                max-width: 100vw;
+                margin-top: 0 !important;
+                padding: 0 4px 0 4px !important;
+                padding-top: 0 !important;
+            }
+            hr { margin: 2px 0 1px 0; }
+            @page {
+                size: A4;
+                margin-top: 0cm;
+                margin-right: 0.5cm;
+                margin-bottom: 0.5cm;
+                margin-left: 0.5cm;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="print-btn" onclick="window.print()">Print</button>
+    <div class="resume-container">
+        <div class="header">
+            <h2>Jathin Pusuluri</h2>
+            <ul class="contact-list">
+                <li>✉️ <span class="contact-label">Email:</span> 126005035@sastra.ac.in</li>
+                <li>📞 <span class="contact-label">Phone:</span> 8639573231</li>
+                <li>
+                    <svg width="18" height="18" viewBox="0 0 448 512" fill="#0A66C2" aria-label="LinkedIn" style="vertical-align:middle;margin-right:4px;"><path d="M100.28 448H7.4V148.9h92.88zm-46.44-340.7C24.09 107.3 0 83.2 0 53.6A53.6 53.6 0 0 1 53.6 0a53.6 53.6 0 0 1 53.6 53.6c0 29.6-24.09 53.7-53.36 53.7zM447.8 448h-92.4V302.4c0-34.7-12.4-58.4-43.3-58.4-23.6 0-37.6 15.9-43.7 31.3-2.3 5.6-2.8 13.4-2.8 21.2V448h-92.4s1.2-241.1 0-266.1h92.4v37.7c12.3-19 34.3-46.1 83.5-46.1 60.9 0 106.6 39.8 106.6 125.4V448z"/></svg>
+                    <span class="contact-label">LinkedIn:</span> <a href="https://linkedin.com/in/jathin-pusuluri021" target="_blank" style="color: black;text-decoration:none;">Jathin Pusuluri</a>
+                </li>
+                <li>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="black" aria-label="GitHub" style="vertical-align:middle;margin-right:4px;"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.726-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.729.083-.729 1.205.085 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.775.418-1.305.762-1.605-2.665-.305-5.466-1.332-5.466-5.93 0-1.31.468-2.38 1.236-3.22-.124-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.3 1.23a11.5 11.5 0 0 1 3-.404c1.02.005 2.045.138 3 .404 2.29-1.552 3.295-1.23 3.295-1.23.653 1.653.242 2.873.12 3.176.77.84 1.235 1.91 1.235 3.22 0 4.61-2.803 5.624-5.475 5.92.43.37.823 1.102.823 2.222 0 1.606-.015 2.898-.015 3.293 0 .322.216.694.825.576C20.565 21.796 24 17.297 24 12c0-6.63-5.373-12-12-12z"/></svg>
+                    <span class="contact-label">GitHub:</span> <a href="https://github.com/Jathin021" target="_blank" style="color: black;text-decoration:none;">Jathin021</a>
+                </li>
+            </ul>
+        </div>
+
+        <hr>
+        <div class="section">
+            <div class="section-title">Objective</div>
+            <div>Aspiring engineer interested in integrating hardware and software to develop innovative embedded and IoT solutions, with a strong foundation in electronics, programming, and web technologies.</div>
+        </div>
+        <hr>
+        <div class="section">
+            <div class="section-title">Education</div>
+            <div class="edu-entry">
+                <span class="edu-left">B.Tech - Electrical and Electronics Engineering</span>
+                <span class="edu-right">Oct 2022 - Jun 2026</span>
+            </div>
+            <span class="edu-inst">SASTRA Deemed University, Thanjavur</span>
+            <span class="edu-grade">CGPA: 8.0863</span>
+            <div class="edu-entry">
+                <span class="edu-left">Intermediate (Class 11 & 12)</span>
+                <span class="edu-right">Jun 2020 - Jul 2022</span>
+            </div>
+            <span class="edu-inst">Sri Chaitanya College of Education</span>
+            <span class="edu-grade">Grade: 97.5%</span>
+            <div class="edu-entry">
+                <span class="edu-left">Class 10</span>
+                <span class="edu-right">Jun 2019 - May 2020</span>
+            </div>
+            <span class="edu-inst">New Vision School</span>
+            <span class="edu-grade">CGPA: 10.0</span>
+        </div>
+        <hr>
+        <div class="section">
+            <div class="section-title">Experience</div>
+            <div class="exp-role">Student Intern</div>
+            <div class="exp-org">Kothagudem Thermal Power Station (KTPS)</div>
+            <div class="exp-date">Jun 2025</div>
+            <ul>
+                <li>Completed 15-day internship at KTPS-VII Stage (1x800 MW) thermal power plant.</li>
+                <li>Observed and documented transformer, circuit breaker, and power system operations.</li>
+                <li>Applied academic knowledge to real-world thermal power plant scenarios.</li>
+            </ul>
+        </div>
+        <hr>
+        <div class="section">
+            <div class="section-title">Projects</div>
+            <div class="project-title">Smart EV Accident Detection & Emergency Alert System</div>
+            <ul>
+                <li>Designed and implemented an Arduino-based safety system for vehicles using tilt and alcohol sensors, GPS, and GSM modules.</li>
+                <li>Automated real-time accident detection and emergency SMS alerts to improve road safety.</li>
+                <li><strong>Technologies:</strong> Arduino, Embedded C, Sensors</li>
+            </ul>
+            <div class="project-title">EAMCET College Predictor</div>
+            <ul>
+                <li>Developed a web application to predict possible TG/AP EAMCET colleges based on user rank input.</li>
+                <li>Enabled students to make informed decisions about college admissions using data-driven analysis.</li>
+                <li><strong>Technologies:</strong> HTML, CSS, JavaScript, Node.js</li>
+            </ul>
+        </div>
+        <hr>
+        <div class="section">
+            <div class="section-title">Skills</div>
+            <div class="skills-lines">
+                <div class="skills-line"><strong>Programming Languages:</strong> C, C++, Java, Python</div>
+                <div class="skills-line"><strong>Web & Software:</strong> HTML5, CSS3, Node.js, JavaScript</div>
+                <div class="skills-line"><strong>Embedded & Hardware:</strong> Arduino, Sensor Integration, Embedded C, Hardware Programming</div>
+                <div class="skills-line"><strong>Tools & Platforms:</strong> Git, GitHub, MATLAB, VS Code</div>
+                <div class="skills-line"><strong>Soft Skills:</strong> Team Leadership, Problem Solving, Time Management, Adaptability</div>
+            </div>
+        </div>
+        <hr>
+        <div class="section">
+            <div class="section-title">Certifications</div>
+            <ul>
+                <li>Web Development Certificate, Udemy, Nov 2024</li>
+                <li>Embedded System Certificate, Internshala, Jul 2025</li>
+            </ul>
+        </div>
+        <hr>
+        <div class="section">
+            <div class="section-title">Co-curricular Activities</div>
+            <ul>
+                <li>Organizer, DAKSH (SASTRA University’s Techno-Management Fest): Conducted hands-on workshops and technical events, coordinated with teams, and facilitated learning for 100+ participants.</li>
+            </ul>
+        </div>
+        <hr>
+        <div class="section">
+            <div class="section-title">Languages</div>
+            <div class="skills-lines">
+                <div class="skills-line">English (Fluent), Telugu (Native), Hindi (Intermediate), Tamil (Beginner)</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 

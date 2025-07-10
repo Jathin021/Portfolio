@@ -46,6 +46,18 @@ window.addEventListener('scroll', () => {
     }
 });
 
+// Scroll progress indicator
+window.addEventListener('scroll', () => {
+    const scrollProgress = document.querySelector('.scroll-progress');
+    const scrollTop = window.pageYOffset;
+    const docHeight = document.body.offsetHeight - window.innerHeight;
+    const scrollPercent = (scrollTop / docHeight) * 100;
+    
+    if (scrollProgress) {
+        scrollProgress.style.width = scrollPercent + '%';
+    }
+});
+
 // Active navigation link highlighting
 const sections = document.querySelectorAll('section');
 const navItems = document.querySelectorAll('.nav-link');
@@ -113,17 +125,28 @@ function typeWriter(element, text, speed = 100) {
 // Initialize typing animation when page loads
 window.addEventListener('load', () => {
     const heroName = document.querySelector('.hero-name');
-    const heroProfession = document.querySelector('.hero-profession');
     const heroSubtitle = document.querySelector('.hero-subtitle');
     
     if (heroName) {
         setTimeout(() => {
-            typeWriter(heroName, 'Pusuluri Jathin Chowdary', 80);
+            typeWriter(heroName, 'Jathin Pusuluri', 80);
         }, 500);
         
         setTimeout(() => {
             typeWriter(heroSubtitle, 'Embedded Systems Enthusiast | Web Developer', 50);
-        }, 5000);
+        }, 3000);
+    }
+    
+    // Add fade-in animation to hero content
+    const heroContent = document.querySelector('.hero-content');
+    if (heroContent) {
+        heroContent.style.opacity = '0';
+        heroContent.style.transform = 'translateY(30px)';
+        setTimeout(() => {
+            heroContent.style.transition = 'opacity 1s ease, transform 1s ease';
+            heroContent.style.opacity = '1';
+            heroContent.style.transform = 'translateY(0)';
+        }, 100);
     }
 });
 
@@ -184,6 +207,38 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Initialize skill animations
     animateSkillBars();
+});
+
+// Contact form handling
+document.addEventListener('DOMContentLoaded', () => {
+    const contactForm = document.querySelector('.form');
+    
+    if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const formData = new FormData(contactForm);
+            const name = contactForm.querySelector('input[type="text"]').value;
+            const email = contactForm.querySelector('input[type="email"]').value;
+            const subject = contactForm.querySelector('input[placeholder="Subject"]').value;
+            const message = contactForm.querySelector('textarea').value;
+            
+            // Simple validation
+            if (!name || !email || !subject || !message) {
+                showNotification('Please fill in all fields', 'error');
+                return;
+            }
+            
+            if (!isValidEmail(email)) {
+                showNotification('Please enter a valid email address', 'error');
+                return;
+            }
+            
+            // Simulate form submission
+            showNotification('Thank you! Your message has been sent successfully.', 'success');
+            contactForm.reset();
+        });
+    }
 });
 
 // Project card hover effects
